@@ -8,13 +8,17 @@ export interface Project {
   liveUrl?: string;
 }
 
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : import.meta.env.BASE_URL + '/';
+
 export const projects: Project[] = [
   {
     id: 1,
     title: 'Oxford 102 Flower Classification',
     tags: ['CNN', 'Transfer Learning', 'PyTorch', 'ResNet'],
     year: '2025',
-    image: '/projects/flower-classification.jpg',
+    image: `${base}projects/flower-classification.jpg`,
     githubUrl: 'https://github.com/Ksrisaitej',
   },
   {
@@ -22,7 +26,7 @@ export const projects: Project[] = [
     title: 'Siamese Network Signature Approval',
     tags: ['Siamese Network', 'Contrastive Loss', 'One-Shot Learning'],
     year: '2025',
-    image: '/projects/signature-approval.jpg',
+    image: `${base}projects/signature-approval.jpg`,
     githubUrl: 'https://github.com/Ksrisaitej',
   },
   {
@@ -30,7 +34,7 @@ export const projects: Project[] = [
     title: 'Leviathan Time Series Classification',
     tags: ['CNN', 'LSTM', 'Time Series', 'Deep Learning'],
     year: '2025',
-    image: '/projects/leviathan-timeseries.jpg',
+    image: `${base}projects/leviathan-timeseries.jpg`,
     githubUrl: 'https://github.com/Ksrisaitej',
   },
   {
@@ -38,7 +42,7 @@ export const projects: Project[] = [
     title: 'Smart Helmet Accident Detection',
     tags: ['MPU6050', 'GPS', 'GSM', 'IIT KGP'],
     year: '2025',
-    image: '/projects/smart-helmet.jpg',
+    image: `${base}projects/smart-helmet.jpg`,
     githubUrl: 'https://github.com/Ksrisaitej',
   },
   {
@@ -46,7 +50,7 @@ export const projects: Project[] = [
     title: 'Handwritten Digit Recognition',
     tags: ['MNIST', 'CNN', 'PyTorch', 'Deep Learning'],
     year: '2025',
-    image: '/projects/digit-recognition.jpg',
+    image: `${base}projects/digit-recognition.jpg`,
     githubUrl: 'https://github.com/Ksrisaitej',
   },
   {
@@ -54,7 +58,8 @@ export const projects: Project[] = [
     title: 'Transient Detection Using SVM',
     tags: ['SVM', 'Scikit-Learn', 'Machine Learning', 'Signal Processing'],
     year: '2025',
-    image: '/projects/transient-detection.jpg',
+    image: `${base}projects/transient-detection.jpg`,
     githubUrl: 'https://github.com/Ksrisaitej',
   },
 ];
+
